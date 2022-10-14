@@ -1,0 +1,12 @@
+[package]
+name = "Fix this later" # TODO: fix this
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+wallpaper = "3.2.0"
+ffpb = "0.1.1"
+directories = "4.0.1"
+windows-service = "0.5.0"

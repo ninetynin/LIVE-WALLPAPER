@@ -24,6 +24,11 @@ fn wallpaper_storage() {
     // TODO: Log the creation of the directory
 }
 
+fn return_wallpaper_storage() -> String {
+    let project_dirs = ProjectDirs::from("com", "Dynamic-Wallpaper", "").unwrap();
+    let dir = project_dirs.config_dir().join("wallpaper-storage"); 
+    dir.to_str().unwrap().to_string()
+}
 fn logs_storage() {
     let project_dirs = ProjectDirs::from("com", "Dynamic-Wallpaper", "").unwrap();
     let dir = project_dirs.config_dir().join("Logs"); // i.e., Roaming\Dynamic-Wallpaper\Logs

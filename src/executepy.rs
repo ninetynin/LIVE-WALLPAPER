@@ -3,17 +3,18 @@ use std::process::{Command, Stdio};
 use execute::{Execute, command};
 
 pub fn exectythepy() {
-    let mut command1 = command("cd './pyDumpImg");
-    let command2 = command("python -u './pyDumpImg/main.py'");
 
-    let mut child = command1
+    // let cdpath = "./pyDumpImg";
+    let mut cdpathnotrelative = "F:\\GITHUB REPOS\\ninetynin\\LIVE-WALLPAPER\\src\\pyDumpImg";
+
+    let mut child = Command::new("python")
+        .arg("main.py")
+        .current_dir(cdpathnotrelative)
         .stdout(Stdio::piped())
         .spawn()
         .expect("failed to execute process");
 
-    let output = child 
-        .wait_with_output()
-        .expect("failed to wait on child");
+    let output = child.wait_with_output().expect("failed to wait on child");
 
     println!("status: {}", output.status);
 }

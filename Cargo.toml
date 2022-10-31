@@ -10,3 +10,8 @@ wallpaper = "3.2.0"
 ffpb = "0.1.1"
 directories = "4.0.1"
 windows-service = "0.5.0"
+execute = "0.2.11"
+
+# [dependencies.pyo3]
+# version = "0.17.2"
+# features = ["auto-initialize"]

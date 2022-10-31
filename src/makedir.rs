@@ -50,5 +50,15 @@ pub fn storage_insideproject() -> String {
     path
 }
 
+pub fn return_newpy_storage() -> String {
+    // path -> ./pyDumpImg/images
+    let mut path = std::env::current_exe().unwrap();
+    path.pop();
+    let mut path = path.to_str().unwrap().to_string();
+    path.push_str("\\pyDumpImg\\images");
+    println!("path: {}", path);
+    path
+}
+
 // For future use (Local AppData) -> use .local_dir() instead of .config_dir()
 // https://docs.rs/directories/4.0.1/directories/struct.ProjectDirs.html

@@ -7,7 +7,7 @@ use std::{io, path::PathBuf};
 
 fn main() {
     // -----------------
-    makedir::create_all_dirs();
+    // makedir::create_all_dirs();
     // -----------------
     executepy::exectythepy();
     // -----------------

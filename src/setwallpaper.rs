@@ -1,3 +1,5 @@
+use std::path::PathBuf;
+
 
 #[path = "./makedir.rs"] mod makedir;
 
@@ -6,13 +8,17 @@ pub fn set_wallpaper_jpg() {
     // let dir_val = crtDirectories::return_wallpaper_storage();
     // let dir_val = makedir::return_wallpaper_storage();
 
-    let dir_val = makedir::storage_insideproject();
-    
+    // let dir_val = makedir::storage_insideproject();
+    let dir_val = makedir::return_newpy_storage();
+    // TODO: FIX THIS SHIT NON DYNAMIC PATH
+    // let dir_val = "F:\\GITHUB REPOS\\ninetynin\\LIVE-WALLPAPER\\src\\pyDumpImg\\images";
+    // let dir_val = "./pyDumpImg/images";
     for entry in std::fs::read_dir(dir_val).unwrap() {
         let entry = entry.unwrap();
         let path = entry.path();
         if path.extension().unwrap() == "jpg" {
             jpg_files.push(path);
+            println!("pushed jpg file: {:?}", entry);
         }
     }
 

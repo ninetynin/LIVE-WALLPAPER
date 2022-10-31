@@ -6,7 +6,7 @@ pub fn exectythepy() {
 
     // let cdpath = "./pyDumpImg";
     let mut cdpathnotrelative = "F:\\GITHUB REPOS\\ninetynin\\LIVE-WALLPAPER\\src\\pyDumpImg";
-
+    // TODO : FIX THIS SHIT PATH makr it dynamic lmao later 🤣🤣🤣
     let mut child = Command::new("python")
         .arg("main.py")
         .current_dir(cdpathnotrelative)
